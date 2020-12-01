@@ -1,13 +1,13 @@
-def sum_to(nums, target):
-    for a in nums:
-        if target - a in nums:
-            return a * (target - a)
+def sum_to(nums, target, count):
+    if count > 1:
+        for a in nums:
+            if b := sum_to(nums, target - a, count - 1):
+                return a * b
+    elif target in nums:
+        return target
 
 with open("day1_input.txt") as f:
     lines = set(map(int, f.readlines()))
 
-print(sum_to(lines, 2020))
-for a in lines:
-    if b := sum_to(lines, 2020 - a):
-        print(a * b)
-        break
+print(sum_to(lines, 2020, 2))
+print(sum_to(lines, 2020, 3))
