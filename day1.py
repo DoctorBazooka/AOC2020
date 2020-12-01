@@ -5,7 +5,10 @@ def sum_to(target):
             if target - a in vals:
                 return a * (target - a)
             vals.add(a)
+
+print(sum_to(2020))
 with open("day1_input.txt") as f:
     for a in map(int, f):
         if b := sum_to(2020 - a):
             print(a * b)
+            break
