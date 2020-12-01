@@ -1,14 +1,15 @@
-def sum_to(target):
-    with open("day1_input.txt") as f:
-        vals = set()
-        for a in map(int, f):
-            if target - a in vals:
-                return a * (target - a)
-            vals.add(a)
+def sum_to(nums, target):
+    vals = set()
+    for a in nums:
+        if target - a in vals:
+            return a * (target - a)
+        vals.add(a)
 
-print(sum_to(2020))
 with open("day1_input.txt") as f:
-    for a in map(int, f):
-        if b := sum_to(2020 - a):
-            print(a * b)
-            break
+    lines = list(map(int, f.readlines()))
+
+print(sum_to(lines, 2020))
+for a in lines:
+    if b := sum_to(lines, 2020 - a):
+        print(a * b)
+        break
