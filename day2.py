@@ -2,10 +2,10 @@ from collections import Counter
 
 def parse_line(line):
     limits, letter, password = line.split(" ")
-    return [*tuple(int(x) for x in limits.split("-")), letter[0], password]
+    return *(int(x) for x in limits.split("-")), letter[0], password
 
 def part1_policy(x, y, letter, password):
-    return letter in password and x <= Counter(password)[letter] <= y
+    return x <= Counter(password)[letter] <= y
 
 def part2_policy(x, y, letter, password):
     return (password[x-1] == letter) ^ (password[y-1] == letter)
