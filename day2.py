@@ -19,5 +19,4 @@ with open("day2_input.txt") as f:
             count_part1 += 1
         if part2_policy(x, y, letter, password):
             count_part2 += 1
-print(count_part1)
-print(count_part2)
+print(count_part1, count_part2)
