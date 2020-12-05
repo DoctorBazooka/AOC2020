@@ -18,5 +18,8 @@ def slope(right, down):
 
     return count
 
-print(slope(3, 1))
-print(slope(1, 1) * slope(3, 1) * slope(5, 1) * slope(7, 1) * slope(1, 2))
+with open("day3_input.txt") as f:
+    lines = list(f.read())
+
+print(slope(lines, 3, 1))
+print(slope(lines, 1, 1) * slope(lines, 3, 1) * slope(lines, 5, 1) * slope(lines, 7, 1) * slope(lines, 1, 2))
