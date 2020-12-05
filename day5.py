@@ -7,7 +7,7 @@ with open("day5_input.txt") as f:
         all_seats.add(seat)
 
 def find_seat(all_seats):
-    for i in range(127 * 8):
+    for i in range(2**10):
         if i not in all_seats and {i+1, i-1} <= all_seats:
             return i
 print(val)
