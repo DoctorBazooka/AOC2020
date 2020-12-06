@@ -1,12 +1,6 @@
 def parse(f):
-    current_party = []
-    for line in f:
-        if len(line.strip()) == 0:
-            yield current_party
-            current_party = []
-        else:
-            current_party.append(set(line.strip()))
-    yield current_party
+    for party in f.read().split("\n\n"):
+        yield [set(x) for x in party.split("\n")]
 
 count_part1 = 0
 count_part2 = 0
