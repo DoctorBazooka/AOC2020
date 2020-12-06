@@ -3,7 +3,6 @@ def skip_lines(f, count):
         if idx % count == 0:
             yield line
 
-
 def slope(right, down):
     count = 0
     position = 0
@@ -14,8 +13,6 @@ def slope(right, down):
             position = (position + right) % width
             if line[position] == "#":
                 count += 1
-
-
     return count
 
 with open("day3_input.txt") as f:

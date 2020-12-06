@@ -8,5 +8,6 @@ def sum_to(nums, target, count):
 
 with open("day1_input.txt") as f:
     lines = set(map(int, f.readlines()))
+    
 print(sum_to(lines, 2020, 2))
 print(sum_to(lines, 2020, 3))
