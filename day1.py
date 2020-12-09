@@ -6,8 +6,9 @@ def sum_to(nums, target, count):
     elif target in nums:
         return target
 
-with open("day1_input.txt") as f:
-    lines = set(map(int, f.readlines()))
+if __name__ == "__main__":
+    with open("day1_input.txt") as f:
+        lines = set(map(int, f.readlines()))
     
-print(sum_to(lines, 2020, 2))
-print(sum_to(lines, 2020, 3))
+    print(sum_to(lines, 2020, 2))
+    print(sum_to(lines, 2020, 3))
