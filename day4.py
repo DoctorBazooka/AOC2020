@@ -14,7 +14,7 @@ field_checker = {
 
 def get_passports(f):
     for line in f.read().split("\n\n"):
-        yield dict(pair.split(":") for pair in line.replace("\n", " ").split())
+        yield dict(pair.split(":") for pair in line.split())
 
 def part1_validate(passport):
     return {'eyr', 'hgt', 'pid', 'iyr', 'hcl', 'ecl', 'byr'} <= passport.keys()
