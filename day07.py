@@ -32,7 +32,7 @@ def part2(lines):
     data = {container: bags for container, bags in process_rules(lines)}
     return number_of_children(data, "shiny gold")
 
-with open("day7_input.txt") as f:
+with open("day07_input.txt") as f:
     lines = list(f.readlines())
 
 print(part1(lines))

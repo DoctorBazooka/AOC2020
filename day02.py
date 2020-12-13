@@ -12,7 +12,7 @@ def part2_policy(x, y, letter, password):
 
 count_part1 = 0
 count_part2 = 0
-with open("day2_input.txt") as f:
+with open("day02_input.txt") as f:
     for line in f:
         x, y, letter, password = parse_line(line)
         if part1_policy(x, y, letter, password):

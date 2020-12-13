@@ -25,7 +25,7 @@ def part2_validate(passport):
 count_part1 = 0
 count_part2 = 0
 
-with open("day4_input.txt") as f:
+with open("day04_input.txt") as f:
     for passport in get_passports(f):
         if part1_validate(passport):
             count_part1 += 1

@@ -1,4 +1,4 @@
-from day1 import sum_to
+from day01 import sum_to
 from collections import deque
 
 def part1(nums):
@@ -22,7 +22,7 @@ def part2(nums, invalid):
             if sum(subarray) == invalid:
                 return min(subarray) + max(subarray)
 
-with open("day9_input.txt") as f:
+with open("day09_input.txt") as f:
     nums = list(int(x) for x in f)
     invalid = part1(nums)
     print(invalid)

@@ -39,7 +39,7 @@ def format_line(line):
     op, arg = line.strip().split()
     return [op, int(arg)]
 
-with open("day8_input.txt") as f:
+with open("day08_input.txt") as f:
     code = [format_line(line) for line in f.readlines()]
 
 print(part1(code))

@@ -3,10 +3,10 @@ def skip_lines(f, count):
         if idx % count == 0:
             yield line
 
-def slope(right, down):
+def slope(lines, right, down):
     count = 0
     position = 0
-    with open("day3_input.txt") as f:
+    with open("day03_input.txt") as f:
         first_line = next(f)
         width = len(first_line) - 1 # Removing \n
         for line in skip_lines(f, down):
@@ -15,7 +15,7 @@ def slope(right, down):
                 count += 1
     return count
 
-with open("day3_input.txt") as f:
+with open("day03_input.txt") as f:
     lines = list(f.read())
 
 print(slope(lines, 3, 1))
