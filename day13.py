@@ -5,7 +5,7 @@ with open("day13_input.txt") as f:
     buses = [(idx, int(x)) for idx, x in enumerate(next(f).split(",")) if not x.startswith("x")]
 
 def part1(estimate, buses):
-    times = [(ceil(estimate / bus) * bus, bus) for _, bus in buses]
+    times = ((ceil(estimate / bus) * bus, bus) for _, bus in buses)
     earliest_time, earliest_id = min(times)
     return earliest_id * (earliest_time - estimate)
 
